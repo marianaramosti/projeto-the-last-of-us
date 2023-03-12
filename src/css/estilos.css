@@ -1,0 +1,120 @@
+.body {
+    font-family: 'Poppins', sans-serif;
+    width: 1280px;
+    max-width: 0 auto;
+}
+
+main:after {
+	content: '';
+	min-height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+	z-index: -1;
+}
+.conteudo{
+    /* background-color: aquamarine; aterar para ficar mais facil de vizualizar */
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    margin-left: 70px;
+}
+
+/* .informacoes {
+    background-color: blueviolet; /* aterar para ficar mais facil de vizualizar*/
+
+.informacoes .logo{
+    max-width: 350px; /*tamanho da logo*/
+    filter: invert(1); /*inverter cor*/
+    margin-bottom: 80px; /*espaçamento para baixo*/
+
+}
+
+.informacoes .descricao{
+    width: 49%; /*tamanho da coluna com relação a inf.*/
+    font-size: 24px; /*tamanho da fonte*/
+    color: #ffffff;
+    line-height: 30px; /*espaçamento entre as linhas*/
+}
+
+.botoes-carrossel {
+    /* background-color: red; */
+    display: flex; /*para mover objetos*/
+    justify-content: center; /*centralizar botoes*/
+    gap: 20px; /*espaçamento entre botoes - espaçamento mais uniforme*/
+}
+
+.botoes-carrossel .botao{
+    background-color: #ffffff; /*cor de fundo*/
+    width: 15px; /*largura dos botoes*/
+    height: 15px; /*altura*/
+    border-radius: 50%; /*arredondamento das bordas*/
+    border: 2% solid transparent;/*borda solida*/
+    cursor:  pointer; /*para aparecer a maozinha do cursor quando passar por cima*/
+    border-color: #ffffff; /*cor da borda*/
+}
+
+.botoes-carrossel .botao.selecionado{
+    background-color: #1d8346;
+}
+
+.menu-lateral{
+    /* background-color: aqua; */
+    position: fixed; /*para definir posição fixa na tela, como se fosse pra baixo das informaçoes*/
+    top: 0; /*posição em relação ao topo*/
+    right: 0; /*posição em relação a margem direita*/
+    width: 80px; /*tamanho largura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral .icone{
+    width: 30px;
+    filter: invert(1); /*inverter cor p branco*/
+    transition: 0.3s ease-in-out; /*animação - para suavizar o efeito hover - quando passa o mouse */
+}
+
+.menu-lateral .icone:hover{
+    transform: scale(1.2);/*hover=quando passar o mouse; scale = aumentar*/
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column; /*colocar icones em coluna*/
+    gap: 15px; 
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /*profundidade - para aparecer as informações*/
+    
+}
+
+.carrossel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /*ajustar a imagem*/
+    display: none; /*para preparar para o efeito de carrossel*/
+    animation: mudarImagem 0.7s;
+}
+
+.carrossel .imagem.ativa{
+    display: block;
+}
+
+@keyframes mudarImagem{
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
